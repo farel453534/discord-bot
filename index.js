@@ -111,3 +111,4 @@ client.login(config.token)
                      `.green)
   })
 // -- Copyright Apo x Hicwwq
+client.login(process.env.token)
