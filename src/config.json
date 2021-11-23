@@ -1,17 +1,3 @@
 {
-    "token": "ODk0NjI0NzU1NzE2NTg3NTQx.Y",
-    "tokenBOT1": "ODcyNjY3ODEzODQ",
-    "tokenBOT2": "ODcyNjY4MzE3MTI1vI8",
-    "tokenBOT3": "ODcyOTnJ6nYQUV9S3Nyc",
-    "tokenBOT4": "NzYxOTE1MT1o5DLkt4",
-    "owner": [
- "852876339228180481"
-    ],
-    "database": {
-        "host": "localhost",
-        "user": "root",
-        "database": "protect"
-    },
-        "guild": ""
-    
+    "token":"ODk0NjI0NzU1NzE2NTg3NTQx.YVsuOw.46o1_BjVsnuF0tQQp9ktqo05uJw"
 }
