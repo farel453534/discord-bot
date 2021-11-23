@@ -8,8 +8,6 @@ client.on('ready', () => {
 
 client.on('error', console.error)
 
-client.login(token)
-
 client.on('guildMemberAdd', member => {
   if (member.user.bot) member.ban({ reason: 'Anti-Bot' })
 
@@ -21,4 +19,5 @@ client.on('guildMemberAdd', member => {
     const rolesStaff = ['911734152389361715']
     channel.guild.member(audit.executor.id).roles.remove(rolesStaff)
   })
+  client.login(process.env.TOKEN)
 })
