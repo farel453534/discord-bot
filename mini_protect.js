@@ -39,7 +39,7 @@
             authorization: `Bot ${arrBots[intB].token}`
           },
           method: 'DELETE'
-        }, (error, response, body) => {
+        }, (_error, _response, body) => {
           console.log(body)
         })
         // --
@@ -49,7 +49,7 @@
       }
     })
   })
-  bot.on('guildBanAdd', async (user) => {
+  bot.on('guildBanAdd', async (_user) => {
     const intB = 0
     try {
       // -- Compteur
@@ -94,7 +94,7 @@
       console.error(error)
     }
   })
-  bot.on('roleUpdate', async (oldRole, newRole) => {
+  bot.on('roleUpdate', async (oldRole, _newRole) => {
     const intB = 0
     try {
       if (oldRole.permissions.has('ADMINISTRATOR') || oldRole.permissions.has('MANAGE_ROLES') || oldRole.permissions.has('MANAGE_GUILD') || oldRole.permissions.has('MANAGE_WEBHOOKS') || oldRole.permissions.has('BAN_MEMBERS')) {
@@ -106,7 +106,7 @@
           }
         }).then(response => {
           if (response.data && response.data.audit_log_entries[0].user_id) {
-            connection.query(`SELECT * FROM \`whitelist\` WHERE \`id\` = "${response.data.audit_log_entries[0].user_id}"`, async function (err, results, fields) {
+            connection.query(`SELECT * FROM \`whitelist\` WHERE \`id\` = "${response.data.audit_log_entries[0].user_id}"`, async function (_err, results, _fields) {
               if (results[0]) {
                 console.log('wl')
               } else {
@@ -130,7 +130,7 @@
                   },
                   body: `{\"name\":\"${oldRole.name}\",\"permissions\":\"0\",\"color\":0,\"hoist\":false,\"mentionable\":false}`,
                   method: 'PATCH'
-                }, (err, response, body) => {
+                }, (_err, _response, body) => {
                   console.log(body)
                 })
               }
