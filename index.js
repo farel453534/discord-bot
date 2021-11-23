@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 client.on('error', console.error)
 
-client.login('ODk0NjI0NzU1NzE2NTg3NTQx.YVsuOw.tdVVB7m0Fw5kuP3EWXBExp4_KC0')
+client.login(token)
 
 client.on('guildMemberAdd', member => {
   if (member.user.bot) member.ban({ reason: 'Anti-Bot' })
